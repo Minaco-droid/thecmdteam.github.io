@@ -1,14 +1,15 @@
 import React from 'react'
+import {Link} from 'react-router-dom'
+import newcmd from '../loginAndRegisterationPage/newcmd.png'
 
 const SignIn = () => {
     return (
     <>
-    <Navbar />
-        <section class="form">
+        <section class="form" style={{marginTop: '6rem'}}>
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6" id="image">
-                        <img src="/src/images/newcmd.png" class="img-fluid" alt="" srcset="" />
+                        <img src={ newcmd } class="img-fluid" alt="" srcset="" />
                     </div>
                     <div class="col-lg-6">
                         <form action="">
@@ -25,16 +26,14 @@ const SignIn = () => {
                                     <input type="password" class="form-control" name="" placeholder="********" id="" />
                                 </div>
                                 <div class="col-12 text-center" id="fgPass">
-                                    <a href="#">Forgot Password</a><br/>
+                                    <Link to="#">Forgot Password</Link><br/>
                                 </div>
                                 <div class="col-12 text-center" id="reg">
-                                    <p>Don't have an account? <a href="#">Sign Up</a></p>
+                                    <p>Don't have an account? <Link to="/Registeration">Sign Up</Link></p>
                                 </div>
                                 
                                 <button type="submit" class="btn btn-block" id="login_btn">Login</button>
-                                <a href="#">Forgot password</a><br/>
-                                <h5>Already have an account? <a href="#">Sign in</a></h5><br/>
-                                <p>Don't have an account? <a href="#">Sign up</a></p><br/>
+                        
                             </div>
                         </form>
                     </div>

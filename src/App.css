@@ -11,40 +11,50 @@
   --primary-color: #2c3e50;
   --secondary-color: #f8c247;
   --font-color: #fff;
+  --black-color: #000;
+}
+
+a{
+    color: var(--primary-color);
+}
+
+a:hover{
+    text-decoration: none;
+    color: var(--secondary-color);
 }
 
 nav{
-  color: #fff;
+  color: var(--font-color);
   background-color: var(--primary-color);
+  border-bottom: 2px solid var(--secondary-color);
 }
 
-#iconAndTitle{
-  display: flex;
-  flex-direction: column;
+.navbar-nav .nav-link:hover{
+    color:var(--secondary-color)
 }
+
+.navbar .nav-link{
+    color: var(--font-color);
+    margin-right: 18px;
+    font-size: 1.2rem;
+}
+
+#menuBar{
+    display:flex;
+    color:var(--secondary-color);
+    padding-top:10px;
+}
+
+#menuBar h5{
+    padding:0 0 7px 5px;
+    font-size: 18px!important;
+}
+
 
 /* THIS IS FOR THE LOGIN PAGE */
 
-@import url("https://fonts.googleapis.com/css?family=Exo:500,600,700|Roboto&display=swap");
-*{
-    padding: 0;
-    box-sizing: border-box;
-    margin: 0;
-}
-
-body{
-    font-family: "Exo", "sans-serif";
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-.form{
-    box-shadow: 5px 5px 20px solid black;
-}
-
 .row{
-    margin:12.5% 5px 5px 5px;
+    margin:2rem 50px 50px 50px;
     border: 2px solid #f8c247;
 }
 
@@ -58,22 +68,22 @@ body{
  form h2{
     display: inline-block;
     font-weight: bold;
-    color: #223A66;
-    border-bottom: 5px solid #f8c247;
+    color: var(--primary-color);
+    border-bottom: 5px solid var(--secondary-color);
 }
 
 form #user{
-    color: #223A66;
+    color: var(--primary-color);
     margin:1.5rem 0 1.5rem 0;
 }
 
 form #pass{
-    color: #223A66;
+    color: var(--primary-color);
     margin-bottom: 1rem;
 }
 
 form #fgPass, #reg, #signIn{
-    color: #223A66;
+    color: var(--primary-color);
     margin-bottom: 4px;
 }
 
@@ -84,21 +94,15 @@ form #fgPass, #reg, #signIn{
 
  form #login_btn{
     margin-bottom: 10px;
-    background-color:#f8c247;
-    color: #2c3e50;
+    background-color:var(--secondary-color);
+    color: var(--primary-color);
     font-weight: bold;
     font-size: 1.1rem;
 }
 
-a{
-    color: #223A66;
+form #login_btn:hover{
+    color: var(--font-color);
 }
-
-a:hover{
-    text-decoration: none;
-    color: #f8c247;
-}
-
 
  @media(max-width:576px) {
      
@@ -134,6 +138,98 @@ a:hover{
     .row #image{
         padding: 1rem;
         margin-bottom: 1rem;
+    }
+
+    #image img{
+        width: 30%;
+        height: 100%;
+    }
+ }
+
+
+ /* THIS IS FOR THE REGISTRATION PAGE */
+
+.row{
+    margin: 50px;
+    border: 2px solid var(--secondary-color);
+}
+
+#image{
+    background: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ form h2{
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: bold;
+    color: var(--primary-color);
+    border-bottom: 5px solid var(--secondary-color);
+    margin: 1.5rem 0 1.5rem 0;
+}
+
+form #userReg, #passReg, #emailReg, #confirmPassReg{
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+form #home, #signInReg{
+    color: var(--primary-color);
+    margin-bottom: 4px;
+
+}
+
+ .form-row{
+     padding: 2rem;
+     line-height: 2;
+ }
+
+ form #login_btnReg{
+    margin-bottom: 10px;
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+form #login_btnReg:hover{
+    color: var(--font-color);
+}
+
+ @media(max-width:576px) {
+
+    .row{
+        margin:16px;
+    }
+     
+    #image{
+        padding: 1rem;
+    }
+
+    #image img{
+        width: 30%;
+        height: 100%;
+    }
+
+    form h2{
+        font-size: 25px;
+    }
+
+    form #signInReg a, #signInReg p, #home a{
+        font-size: 15px;
+    }
+ }
+
+ @media(max-width:992px) {
+
+    .row{
+        margin:16px;
+    }
+
+    #image{
+        padding: 1rem;
     }
 
     #image img{
